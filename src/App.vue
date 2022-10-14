@@ -76,6 +76,7 @@ export default {
         localStorage.setItem('lang', 'fa')
         document.documentElement.setAttribute('lang', 'fa')
       }
+      alert(value)
     },
 
     changeLangButton() {
