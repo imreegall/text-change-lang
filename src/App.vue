@@ -59,11 +59,23 @@ export default {
     },
 
     changeLangOfNavigation(value) {
-      this.$i18n.locale = 'fa'
-      localStorage.setItem('lang', 'fa')
-      document.documentElement.setAttribute('lang', 'fa')
-
-      this.$root.$i18n.locale = 'fa'
+      if (value === 'ru') {
+        this.$i18n.locale = 'ru'
+        localStorage.setItem('lang', 'ru')
+        document.documentElement.setAttribute('lang', 'ru')
+      } else if (value === 'en') {
+        this.$i18n.locale = 'en'
+        localStorage.setItem('lang', 'en')
+        document.documentElement.setAttribute('lang', 'en')
+      } else if (value === 'tr') {
+        this.$i18n.locale = 'tr'
+        localStorage.setItem('lang', 'tr')
+        document.documentElement.setAttribute('lang', 'tr')
+      } else if (value === 'fa') {
+        this.$i18n.locale = 'fa'
+        localStorage.setItem('lang', 'fa')
+        document.documentElement.setAttribute('lang', 'fa')
+      }
     },
 
     changeLangButton() {
