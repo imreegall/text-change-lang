@@ -60,7 +60,6 @@ export default {
 
   // хук, который отрабатывает после загрузки страницы
   mounted() {
-    this.$root.$i18n.locale = 'fa'
     // закрытие меню выбора языка по клику в любое другое место
     document.addEventListener('click', this.closeLangMenu)
 
@@ -77,6 +76,10 @@ export default {
         })
       })
     })
+
+    setTimeout(() => {
+      this.$root.$i18n.locale = 'fa'
+    }, 3000)
   },
 }
 </script>
