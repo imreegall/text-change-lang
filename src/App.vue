@@ -59,7 +59,7 @@ export default {
     },
 
     changeLangOfNavigation(value) {
-      const newLang = value.toString()
+      const newLang = value.toString().trim()
       if (newLang === 'ru') {
         this.$i18n.locale = 'ru'
         localStorage.setItem('lang', 'ru')
@@ -79,6 +79,8 @@ export default {
       }
       alert(value)
       alert(value.length)
+      alert(newLang)
+      alert(newLang.length)
     },
 
     changeLangButton() {
