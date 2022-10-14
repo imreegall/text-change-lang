@@ -13,6 +13,7 @@
       >
         <h6>{{index.toUpperCase()}}</h6>
       </li>
+      <li><h6>{{$t('nav.collection')}}</h6></li>
     </ul>
   </div>
 </template>
