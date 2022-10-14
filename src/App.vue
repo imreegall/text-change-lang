@@ -61,6 +61,7 @@ export default {
       this.$i18n.locale = newLang
       localStorage.setItem('lang', newLang)
       document.documentElement.setAttribute('lang', newLang)
+      console.log("lang is changed!" + newLang)
     }
   },
 
@@ -92,7 +93,8 @@ export default {
     })
 
     setTimeout(() => {
-      this.$i18n.locale = 'fa'
+      // this.$i18n.locale = 'fa'
+      this.pageLang = 'fa'
     }, 2000)
   },
 }
