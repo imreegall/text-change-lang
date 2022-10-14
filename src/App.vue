@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p @click="changeLangButton">Сменить язык</p>
+    <p>{{$t('nav.collection')}}</p>
     <nft-burger-menu />
     <nft-navigation
         @selectedLang="changeLangOfNavigation"
