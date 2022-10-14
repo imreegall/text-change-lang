@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <nft-burger-menu />
-    <nft-navigation />
+    <nft-navigation
+        @selectedLang="changeLangOfNavigation"
+    />
   </div>
 </template>
 
@@ -52,6 +54,10 @@ export default {
           menu.classList.toggle('active')
         }
       }
+    },
+
+    changeLangOfNavigation(value) {
+      this.pageLang = value
     }
   },
 
@@ -85,18 +91,18 @@ export default {
     })
 
     // изменение языка
-    const langMenuElems = document.querySelectorAll('.changeLangMenu > li')
-    langMenuElems.forEach(elem => {
-      elem.addEventListener('click', element => {
-        this.pageLang = element.currentTarget.innerText.toLowerCase()
-        alert(element.currentTarget.innerText.toLowerCase())
-      })
-    })
+    // const langMenuElems = document.querySelectorAll('.changeLangMenu > li')
+    // langMenuElems.forEach(elem => {
+    //   elem.addEventListener('click', element => {
+    //     this.pageLang = element.currentTarget.innerText.toLowerCase()
+    //     alert(element.currentTarget.innerText.toLowerCase())
+    //   })
+    // })
 
-    setTimeout(() => {
-      // this.$i18n.locale = 'fa'
-      this.pageLang = 'fa'
-    }, 2000)
+    // setTimeout(() => {
+    //   // this.$i18n.locale = 'fa'
+    //   this.pageLang = 'fa'
+    // }, 2000)
   },
 }
 </script>

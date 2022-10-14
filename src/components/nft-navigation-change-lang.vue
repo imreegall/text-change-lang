@@ -9,6 +9,7 @@
     <ul class="changeLangMenu">
       <li
           v-for="(item, index) in this.languages"
+          @click="sendSelectedLangToNavigation"
       >
         <h6>{{index.toUpperCase()}}</h6>
       </li>
@@ -31,6 +32,10 @@ export default {
     displayLangMenu: (elem) => {
       elem.currentTarget.nextElementSibling.classList.toggle('active')
     },
+
+    sendSelectedLangToNavigation(elem) {
+      this.$emit('sendLang', elem.currentTarget.innerText.toLowerCase())
+    }
   },
   watch: {},
   mounted() {}

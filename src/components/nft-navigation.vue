@@ -1,6 +1,6 @@
 <template>
   <div class="nft-navigation">
-    <a href="#app" class="logo">LOGO V6</a>
+    <a href="#app" class="logo">LOGO V7</a>
     <ul dir="auto">
       <li><a href="#mainPageMenuCollectionBut" @click="openMainMenu"><h6>{{$t('nav.collection')}}</h6></a></li>
       <li><h6>/</h6></li>
@@ -11,7 +11,9 @@
       <li><a href="#mainPageAbout" @click="openMainMenu"><h6>{{$t('nav.team')}}</h6></a></li>
       <li><h6>/</h6></li>
       <li>
-        <nft-navigation-change-lang />
+        <nft-navigation-change-lang
+            @sendLang="getSelectedLang"
+        />
       </li>
     </ul>
     <nft-navigation-burger @click="toggleBurgerMenu"/>
@@ -54,6 +56,10 @@ export default {
 
       const parent = element.parentElement
       parent.classList.toggle('hide')
+    },
+
+    getSelectedLang(lang) {
+      this.$emit('selectedLang', lang)
     }
   }
 
