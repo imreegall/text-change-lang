@@ -57,7 +57,9 @@ export default {
     },
 
     changeLangOfNavigation(value) {
-      this.pageLang = value
+      this.$i18n.locale = value
+      localStorage.setItem('lang', value)
+      document.documentElement.setAttribute('lang', value)
     }
   },
 
