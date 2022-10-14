@@ -21,7 +21,7 @@
 <script>
 import nftNavigationBurger from "./nft-navigation-burger.vue"
 import nftNavigationChangeLang from "./nft-navigation-change-lang.vue";
-// import dispatchEventsForElem from "./mixins/dispatchEventsForElem.js";
+import dispatchEventsForElem from "./mixins/dispatchEventsForElem.js";
 
 export default {
   name: "nft-navigation",
@@ -37,7 +37,7 @@ export default {
       const targetElem = document.querySelector(id)
 
       if (!targetElem.classList.contains('active')) {
-        // dispatchEventsForElem(targetElem, 'click')
+        dispatchEventsForElem(targetElem, 'click')
       }
     },
 

@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <nft-burger-menu />
     <nft-navigation />
   </div>
 </template>
 
 <script>
+import nftBurgerMenu from "./components/nft-burger-menu.vue"
 import nftNavigation from "./components/nft-navigation.vue"
 
 export default {
@@ -13,6 +15,7 @@ export default {
 
   // дети компонента
   components: {
+    nftBurgerMenu,
     nftNavigation
   },
 
