@@ -1,6 +1,6 @@
 <template>
   <div class="nft-navigation">
-    <a href="#app" class="logo">LOGO</a>
+    <a href="#app" class="logo">LOGO V2</a>
     <ul dir="auto">
       <li><a href="#mainPageMenuCollectionBut" @click="openMainMenu"><h6>{{$t('nav.collection')}}</h6></a></li>
       <li><h6>/</h6></li>
@@ -98,7 +98,15 @@ export default {
 
     .logo {
       @media (max-width: 1439px) {
-        display: none;
+        font-family: 'FS Albert Pro', sans-serif;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        @include user-select(none);
+
+        //display: none;
       }
 
       @media (min-width: 1440px) {
