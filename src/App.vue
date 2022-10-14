@@ -61,6 +61,8 @@ export default {
       this.$i18n.locale = value
       localStorage.setItem('lang', value)
       document.documentElement.setAttribute('lang', value)
+
+      this.$root.$i18n.locale = value
     },
 
     changeLangButton() {
