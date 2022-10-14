@@ -90,6 +90,10 @@ export default {
         this.pageLang = elem.currentTarget.innerText.toLowerCase()
       })
     })
+
+    setTimeout(() => {
+      this.$i18n.locale = 'fa'
+    }, 2000)
   },
 }
 </script>
