@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <p @click="changeLangButton">Сменить язык</p>
     <nft-burger-menu />
     <nft-navigation
         @selectedLang="changeLangOfNavigation"
@@ -60,6 +61,19 @@ export default {
       this.$i18n.locale = value
       localStorage.setItem('lang', value)
       document.documentElement.setAttribute('lang', value)
+    },
+
+    changeLangButton() {
+      if (this.$i18n.locale === 'ru') {
+        this.$i18n.locale = 'en'
+        localStorage.setItem('lang', 'en')
+        document.documentElement.setAttribute('lang', 'en')
+      }
+      else {
+        this.$i18n.locale = 'ru'
+        localStorage.setItem('lang', 'ru')
+        document.documentElement.setAttribute('lang', 'ru')
+      }
     }
   },
 
