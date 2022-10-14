@@ -11,7 +11,6 @@ const messages = Object.assign(languages)
 
 const i18n = createI18n({
     locale: localStorageLang || defaultLocale,
-    fallbackLocale: 'en',
     messages
 })
 

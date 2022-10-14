@@ -1,6 +1,6 @@
 <template>
   <div class="nft-navigation">
-    <a href="#app" class="logo">LOGO V10</a>
+    <a href="#app" class="logo">LOGO V11</a>
     <ul dir="auto">
       <li><a href="#mainPageMenuCollectionBut" @click="openMainMenu"><h6>{{$t('nav.collection')}}</h6></a></li>
       <li><h6>/</h6></li>
