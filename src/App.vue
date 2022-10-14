@@ -78,6 +78,7 @@ export default {
         document.documentElement.setAttribute('lang', 'fa')
       }
       alert(value)
+      alert(value.length)
     },
 
     changeLangButton() {
