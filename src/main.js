@@ -2,23 +2,18 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
+import {languages} from "./i18n"
+import {defaultLocale} from "./i18n";
 import {createI18n} from "vue-i18n";
 
 const localStorageLang = localStorage.getItem('lang')
 
-const messages = {
-    "ru": {
-        "welcome": "Привет!"
-    },
-    "en": {
-        "welcome": "Hello!"
-    }
-}
+const messages = Object.assign(languages)
 
 const i18n = createI18n({
     seo: true,
     legacy: true,
-    locale: localStorageLang || "ru",
+    locale: localStorageLang || defaultLocale,
     fallbackLocale: 'en',
     messages
 })
