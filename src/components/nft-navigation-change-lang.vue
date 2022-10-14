@@ -42,14 +42,14 @@ export default {
   watch: {
     //при изменении языка менять локаль, сохранять его в локалСтор и изменять атрибут html
     pageLang(newLang) {
-      this.$i18n.locale = newLang
+      this.$root.$i18n.locale = newLang
       localStorage.setItem('lang', newLang)
       document.documentElement.setAttribute('lang', newLang)
     }
   },
   mounted() {
     //обновить переменную языка
-    this.pageLang = this.$i18n.locale
+    this.pageLang = this.$root.$i18n.locale
   }
 }
 </script>

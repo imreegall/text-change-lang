@@ -10,8 +10,6 @@ const localStorageLang = localStorage.getItem('lang')
 const messages = Object.assign(languages)
 
 const i18n = createI18n({
-    seo: true,
-    legacy: true,
     locale: localStorageLang || defaultLocale,
     fallbackLocale: 'en',
     messages
