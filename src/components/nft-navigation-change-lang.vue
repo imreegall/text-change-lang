@@ -9,11 +9,9 @@
     <ul class="changeLangMenu">
       <li
           v-for="(item, index) in this.languages"
-          @click="changeLang"
       >
         <h6>{{index.toUpperCase()}}</h6>
       </li>
-      <li><h6>{{$t('nav.collection')}}</h6></li>
     </ul>
   </div>
 </template>
@@ -25,8 +23,7 @@ export default {
   name: "nft-navigation-change-lang",
   data() {
     return {
-      languages,
-      pageLang: ''
+      languages
     }
   },
   methods: {
@@ -34,24 +31,9 @@ export default {
     displayLangMenu: (elem) => {
       elem.currentTarget.nextElementSibling.classList.toggle('active')
     },
-
-    //смена и сохранение языка на выбранный
-    changeLang(elem) {
-      this.pageLang = elem.currentTarget.innerText.toLowerCase()
-    }
   },
-  watch: {
-    //при изменении языка менять локаль, сохранять его в локалСтор и изменять атрибут html
-    pageLang(newLang) {
-      this.$root.$i18n.locale = newLang
-      localStorage.setItem('lang', newLang)
-      document.documentElement.setAttribute('lang', newLang)
-    }
-  },
-  mounted() {
-    //обновить переменную языка
-    this.pageLang = this.$root.$i18n.locale
-  }
+  watch: {},
+  mounted() {}
 }
 </script>
 

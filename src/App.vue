@@ -56,7 +56,13 @@ export default {
   },
 
   // слежение за изменением
-  watch: {},
+  watch: {
+    pageLang(newLang) {
+      this.$i18n.locale = newLang
+      localStorage.setItem('lang', newLang)
+      document.documentElement.setAttribute('lang', newLang)
+    }
+  },
 
   // хук, который отрабатывает после загрузки страницы
   mounted() {
@@ -77,9 +83,13 @@ export default {
       })
     })
 
-    setTimeout(() => {
-      this.$root.$i18n.locale = 'fa'
-    }, 3000)
+    // изменение языка
+    const langMenuElems = document.querySelectorAll('.changeLangMenu > li')
+    langMenuElems.forEach(elem => {
+      elem.addEventListener('click', elem => {
+        this.pageLang = elem.currentTarget.innerText.toLowerCase()
+      })
+    })
   },
 }
 </script>
