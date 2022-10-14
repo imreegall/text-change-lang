@@ -87,8 +87,9 @@ export default {
     // изменение языка
     const langMenuElems = document.querySelectorAll('.changeLangMenu > li')
     langMenuElems.forEach(elem => {
-      elem.addEventListener('click', elem => {
-        this.pageLang = elem.currentTarget.innerText.toLowerCase()
+      elem.addEventListener('click', element => {
+        this.pageLang = element.currentTarget.innerText.toLowerCase()
+        alert(element.currentTarget.innerText.toLowerCase())
       })
     })
 
