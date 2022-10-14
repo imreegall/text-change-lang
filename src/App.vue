@@ -59,11 +59,12 @@ export default {
     },
 
     changeLangOfNavigation(value) {
-      this.$i18n.locale = value
-      localStorage.setItem('lang', value)
-      document.documentElement.setAttribute('lang', value)
+      const newLang = value.toString()
+      this.$i18n.locale = newLang
+      localStorage.setItem('lang', newLang)
+      document.documentElement.setAttribute('lang', newLang)
 
-      this.$root.$i18n.locale = value
+      this.$root.$i18n.locale = newLang
     },
 
     changeLangButton() {
