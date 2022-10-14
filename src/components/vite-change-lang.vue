@@ -1,5 +1,6 @@
 <template>
   <div class="vite-change-lang">
+    <p>v2</p>
     <p @click="changeLang">Сменить язык</p>
     <p class="lang">{{this.$i18n.locale}}</p>
     <p>{{$t('welcome')}}</p>
